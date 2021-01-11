@@ -6,15 +6,15 @@
   
   <title>C语言课设 | ksw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="运动会计分系统 #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;long long N,M,W;FILE *fp;typedef struct ee{    char XueXiaoMingChen[100];    struct ee *next;}XueXiao;typedef struct c">
+  <meta name="description" content="运动会比赛计分系统 #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;long long N,M,W;FILE *fp;typedef struct ee{    char XueXiaoMingChen[100];    struct ee *next;}XueXiao;typedef struct">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言课设">
 <meta property="og:url" content="https://ksw2003.github.io/2021/01/11/C%E8%AF%AD%E8%A8%80%E8%AF%BE%E8%AE%BE/index.html">
 <meta property="og:site_name" content="ksw">
-<meta property="og:description" content="运动会计分系统 #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;long long N,M,W;FILE *fp;typedef struct ee{    char XueXiaoMingChen[100];    struct ee *next;}XueXiao;typedef struct c">
+<meta property="og:description" content="运动会比赛计分系统 #include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;long long N,M,W;FILE *fp;typedef struct ee{    char XueXiaoMingChen[100];    struct ee *next;}XueXiao;typedef struct">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-11T12:42:16.000Z">
-<meta property="article:modified_time" content="2021-01-11T12:43:01.174Z">
+<meta property="article:modified_time" content="2021-01-11T12:47:09.163Z">
 <meta property="article:author" content="ksw">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>运动会计分系统</p>
+        <p>运动会比赛计分系统</p>
 <p>#include &lt;stdio.h&gt;<br>#include &lt;stdlib.h&gt;<br>#include &lt;string.h&gt;<br>long long N,M,W;<br>FILE *fp;<br>typedef struct ee{<br>    char XueXiaoMingChen[100];<br>    struct ee *next;<br>}XueXiao;<br>typedef struct cc{<br>    char XiangMuMC[100];<br>    struct cc *next;<br>}XM;<br>typedef struct vv{<br>    char XiangMuMC[100];<br>    struct vv *next;<br>}XMN;<br>typedef struct ft{<br>    char XMMC[100];<br>    char HuoJiangYunDongYuan[100];<br>    char SuoShuXueXiao[100];<br>    int mingci;<br>    int fenshu;<br>    struct ft *next;<br>}GXMHuoJiangXXi;<br>long long getint(){<br>    long long tem;<br>    long long i,l,m;<br>    char s[100];<br>    while(1){<br>        m=0;<br>        gets(s);<br>        l=strlen(s);<br>        for(i=0;i&lt;l;i++){<br>            if(s[i]&gt;=’0’&amp;&amp;s[i]&lt;=’9’)<br>              ++m;<br>        }<br>        if(((tem=atoi(s))||tem == 0)&amp;&amp;m==l)<br>        return tem;<br>        printf(“输入错误！请再次输入：\n”);<br>    }<br>}<br>void CaiDan();<br>XueXiao *X=NULL;<br>XM *Y = NULL;<br>XMN *Z = NULL;<br>GXMHuoJiangXXi  *head = NULL;<br>long long sum = 0;</p>
 <p>void ChuShiHua(){<br>    printf(“请输入学校总数： “);<br>    N = getint();<br>    printf(“ 请输入这些学校的名字： \n”);<br>    long long i;<br>    XueXiao *pt1,*prept1;<br>    fp = fopen(“运动会计分.txt”,”w+”);<br>    for(i=1;i&lt;=N;i++){<br>        printf(“  第%d个：”,i);<br>        pt1 = (XueXiao *)malloc(sizeof(XueXiao));<br>        scanf(“%s”,pt1-&gt;XueXiaoMingChen);<br>        fprintf(fp,”%s  “,pt1-&gt;XueXiaoMingChen);<br>        if(i == 1){<br>            X = prept1 = pt1;<br>            pt1-&gt;next = NULL;<br>        }<br>        else{<br>            prept1-&gt;next = pt1;<br>            pt1-&gt;next = NULL;<br>            prept1 = pt1 ;<br>        }<br>    }<br>    fprintf(fp,”\n”);<br>    getchar();<br>    printf(“请输入男子项目总数： “);<br>    M = getint();<br>    printf(“ 请输入这些项目的名字： \n”);<br>    XM *pt2,*prept2;<br>    for(i=1;i&lt;=M;i++){<br>        printf(“  第%d个：”,i);<br>        pt2 = (XM *)malloc(sizeof(XM));<br>        scanf(“%s”,pt2-&gt;XiangMuMC );<br>        fprintf(fp,”%s  “,pt2-&gt;XiangMuMC);<br>        if(i == 1){<br>            Y = prept2 = pt2;<br>            pt2-&gt;next = NULL;<br>        }<br>        else{<br>            prept2-&gt;next = pt2;<br>            pt2-&gt;next = NULL;<br>            prept2 = pt2 ;<br>        }<br>    }<br>    fprintf(fp,”\n”);<br>    getchar();<br>    printf(“请输入女子项目总数： “);<br>    W = getint();<br>    printf(“ 请输入这些项目的名字： \n”);<br>    XMN *pt3,*prept3;<br>    for(i=1;i&lt;=W;i++){<br>        printf(“  第%d个：”,i);<br>        pt3 = (XMN *)malloc(sizeof(XMN));<br>        scanf(“%s”,pt3-&gt;XiangMuMC  );<br>        fprintf(fp,”%s “,pt3-&gt;XiangMuMC);<br>        if(i == 1){<br>            Z = prept3 = pt3;<br>            pt3-&gt;next = NULL;</p>
 <pre><code>    &#125;
