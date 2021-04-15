@@ -2,6 +2,19 @@
 <search> 
   
   
+    
+    <entry>
+      <title>Hello！</title>
+      <link href="2021/04/15/test-good/"/>
+      <url>2021/04/15/test-good/</url>
+      
+        <content type="html"><![CDATA[<h1 id="中国，你好！"><a href="#中国，你好！" class="headerlink" title="中国，你好！"></a>中国，你好！</h1><h2 id="c语言："><a href="#c语言：" class="headerlink" title="c语言："></a>c语言：</h2><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"中国，你好！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="swift语言："><a href="#swift语言：" class="headerlink" title="swift语言："></a>swift语言：</h2><pre class="line-numbers language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"中国，你好！"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
   
   
 </search>
